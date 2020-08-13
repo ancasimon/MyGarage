@@ -4,8 +4,8 @@ using System.Text;
 
 namespace MyGarage
 {
-    class TeslaModel3 : Car
+    class YamahaWaveRunner : Watercraft
     {
-        public bool UsesSmartphoneAsKey { get; set; } = true;
+        public bool Has40mmJetPump { get; set; } = true;
     }
 }

@@ -4,8 +4,10 @@ using System.Text;
 
 namespace MyGarage
 {
-    class TeslaModel3 : Car
+    enum VehicleType
     {
-        public bool UsesSmartphoneAsKey { get; set; } = true;
+        Car,
+        Aircraft,
+        Watercraft
     }
 }

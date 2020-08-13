@@ -10,6 +10,7 @@ namespace MyGarage
         public string FuelOrBatteryCapacity { get; set; }
         public Color Color { get; set; }
         public int PassengerOccupancy { get; set; }
+        public VehicleType VehicleType { get; set; }
 
         //base methods:
         public virtual void Refuel()

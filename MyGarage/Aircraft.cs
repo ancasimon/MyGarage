@@ -18,7 +18,7 @@ namespace MyGarage
             Console.WriteLine($"{Name}, time to refuel!");
         }
 
-        public void Fly()
+        public virtual void Fly()
         {
             Console.WriteLine($"{Name}, you can fly {FuelOrBatteryCapacity} today, if you want to!");
         }
