@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyGarage
+namespace MyGarage.AircraftVehicles
 {
-    class Watercraft : Vehicle
+    class Aircraft : Vehicle
     {
         //public string Name { get; set; }
         //public string FuelCapacity { get; set; }
@@ -12,14 +12,21 @@ namespace MyGarage
         //public int PassengerOccupancy { get; set; }
         //Anca: deleted initial properties after I created the base class Vehicle and set it up so that the other 3 classes inherit from it!
 
+
         public override void Refuel()
         {
-            Console.WriteLine($"{Name} up for refueling.");
+            Console.WriteLine($"{Name}, time to refuel!");
         }
 
-        public override void Drive()
+        public virtual void Fly()
         {
-            Console.WriteLine($"{Name} can go {FuelOrBatteryCapacity} today.");
+            Console.WriteLine($"{Name}, you can fly {FuelOrBatteryCapacity} today, if you want to!");
         }
+
+        public void Land()
+        {
+            Console.WriteLine($"{Name}, you have used up quite a bit of fuel; time to land.");
+        }
+
     }
 }
