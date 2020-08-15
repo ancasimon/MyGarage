@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using MyGarage.AircraftVehicles;
+using MyGarage.Cars;
+using MyGarage.WatercraftVehicles;
 
 namespace MyGarage
 {
@@ -10,7 +13,7 @@ namespace MyGarage
         {
             // Build a collection of all vehicles that fly               //ANCA: Question - should this be relying on a property/conditional or is it ok if we manually identify that we are creating aircraft objects??
             // With a single `foreach`, have each vehicle Fly()
-            var aircraft1 = new AircraftVehicles.BombardierChallenger350()
+            var aircraft1 = new BombardierChallenger350()
             {
                 Name = "Bombardier Challenger 350",
                 FuelOrBatteryCapacity = "350,000",
@@ -18,7 +21,7 @@ namespace MyGarage
                 PassengerOccupancy = 10,
                 VehicleType = VehicleType.Aircraft
             };
-            var aircraft2 = new AircraftVehicles.BombardierChallenger350()
+            var aircraft2 = new BombardierChallenger350()
             {
                 Name = "Bombardier Challenger 350",
                 FuelOrBatteryCapacity = "350,000",
@@ -26,7 +29,7 @@ namespace MyGarage
                 PassengerOccupancy = 10,
                 VehicleType = VehicleType.Aircraft
             };
-            var aircraft3 = new AircraftVehicles.BombardierChallenger650()
+            var aircraft3 = new BombardierChallenger650()
             {
                 Name = "Bombardier Challenger 650",
                 FuelOrBatteryCapacity = "4,011 nm",
@@ -34,7 +37,7 @@ namespace MyGarage
                 PassengerOccupancy = 12,
                 VehicleType = VehicleType.Aircraft
             };
-            var aircraft4 = new AircraftVehicles.BombardierChallenger650()
+            var aircraft4 = new BombardierChallenger650()
             {
                 Name = "Bombardier Challenger 650",
                 FuelOrBatteryCapacity = "4,011 nm",
@@ -43,7 +46,7 @@ namespace MyGarage
                 VehicleType = VehicleType.Aircraft
             };
 
-            var aircraftVehicles = new List<AircraftVehicles.Aircraft>();
+            var aircraftVehicles = new List<Aircraft>();
 
             aircraftVehicles.Add(aircraft1);
             aircraftVehicles.Add(aircraft2);
@@ -59,7 +62,7 @@ namespace MyGarage
 
             // Build a collection of all vehicles that operate on roads
             // With a single `foreach`, have each road vehicle Drive()
-            var car1NissanLeaf = new Cars.NissanLeaf()
+            var car1NissanLeaf = new NissanLeaf()
             {
                 Name = "LeafMeAlone",
                 FuelOrBatteryCapacity = "200 miles",
@@ -68,7 +71,7 @@ namespace MyGarage
                 VehicleType = VehicleType.Car
             };
 
-            var car2TeslaModel3 = new Cars.TeslaModel3()
+            var car2TeslaModel3 = new TeslaModel3()
             {
                 Name = "Model 3",
                 FuelOrBatteryCapacity = "300 miles",
@@ -77,7 +80,7 @@ namespace MyGarage
                 VehicleType = VehicleType.Car
             };
 
-            var cars = new List<Cars.Car>();
+            var cars = new List<Car>();
 
             cars.Add(car1NissanLeaf);
             cars.Add(car2TeslaModel3);
@@ -91,7 +94,7 @@ namespace MyGarage
 
             // Build a collection of all vehicles that operate on water
             // With a single `foreach`, have each water vehicle Drive()
-            var waverunner1 = new WatercraftVehicles.YamahaWaveRunner()
+            var waverunner1 = new YamahaWaveRunner()
             {
                 Name = "WaveBasic",
                 FuelOrBatteryCapacity = "90 miles",
@@ -99,7 +102,7 @@ namespace MyGarage
                 PassengerOccupancy = 1,
                 VehicleType = VehicleType.Watercraft
             };
-            var waverunner2 = new WatercraftVehicles.YamahaWaveRunner()
+            var waverunner2 = new YamahaWaveRunner()
             {
                 Name = "WavePlus",
                 FuelOrBatteryCapacity = "90 miles",
@@ -108,7 +111,7 @@ namespace MyGarage
                 VehicleType = VehicleType.Watercraft
             };
 
-            var watercraft = new List<WatercraftVehicles.Watercraft>();
+            var watercraft = new List<Watercraft>();
 
             watercraft.Add(waverunner1);
             watercraft.Add(waverunner2);
